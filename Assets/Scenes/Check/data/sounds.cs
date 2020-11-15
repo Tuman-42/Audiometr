@@ -12,7 +12,7 @@ public class sounds : MonoBehaviour
     private bool first = true;
     public float[] volume = { -0.1f, -0.1f, -0.1f, -0.1f, -0.1f, -0.1f, -0.1f, -0.1f, -0.1f, -0.1f, -0.1f };
     public GameObject pref;
-    public Canvas can;
+    public GameObject can;
     private bool flag = false;
     public Text results;
 
@@ -31,8 +31,8 @@ public class sounds : MonoBehaviour
         {
             var pointer = Instantiate(pref) as GameObject;
             pointer.transform.SetParent(can.transform);
-            pointer.transform.localPosition = new Vector2(-100f + i * 22f, -70f + 600f * (float)volume[i]);
-            if ((-100f + 1000f * (float)volume[i])>30)
+            pointer.transform.localPosition = new Vector2(-44f + i * 9f, -45f + 160f * volume[i]);
+            if (-190f + 1600f * volume[i]  > 100)
             {
                 flag = true;
             }
